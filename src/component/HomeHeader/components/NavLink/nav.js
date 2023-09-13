@@ -42,7 +42,7 @@ const Nav = () => {
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <BiUserCircle className="profile-icon-cr-log" />
-          {/* <h5>{userName.name ? `${userName.name}` : "profile"} </h5> */}
+          <h5>{userName.name ? `${userName.name}` : "profile"} </h5>
         </button>
       </div>
     </div>
