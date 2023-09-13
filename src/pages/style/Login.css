@@ -1,0 +1,613 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: auto;
+}
+.loginPage {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background: url(../../image/log.jpg) center/cover fixed;
+}
+.login {
+  width: 430px;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  place-items: center;
+  background-color: transparent;
+  margin: 3rem 1rem;
+  display: flex;
+  box-shadow: 0px 5px 10px 4px rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+  place-content: center;
+}
+.title-login {
+  margin: 2rem;
+  font-size: 23px;
+  font-weight: 900;
+  color: black;
+}
+.input-email {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  gap: 2rem;
+}
+
+.input-email input {
+  width: 270px;
+  padding: 13px 22px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  color: black;
+  background: transparent;
+  box-shadow: 0px 5px 10px 4px rgba(0, 0, 0, 0.5);
+}
+.input-email input:hover {
+  border: 2px solid black;
+  place-content: center;
+}
+.submit-btn {
+  padding: 8px 11px;
+  color: white;
+  background-color: blue;
+  border: 1px solid black;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+.submit-btn:hover {
+  border: 2px solid yellowgreen;
+}
+.google-btn {
+  width: 120px;
+  padding: 7px 10px;
+  color: white;
+  margin: 2rem 2rem;
+  border: 1px solid black;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.login-test-credential-btn {
+  width: 150px;
+  padding: 7px 10px;
+  color: black;
+  margin: 2rem;
+  border: 2px solid black;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.res-link {
+  margin: 2rem;
+  color: black;
+  font-size: 17px;
+  font-weight: 600;
+}
+.signupclick {
+  color: blue;
+  font-size: 17px;
+  font-weight: 600;
+}
+@media (max-width: 375px) {
+  body {
+    /* overflow: hidden; */
+    overflow-x: hidden;
+  }
+  .loginPage {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background: url(../../image/log.jpg) center/cover fixed;
+  }
+  .login {
+    width: 340px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    background-color: transparent;
+    margin: 3rem 0rem;
+    display: flex;
+    box-shadow: 0px 5px 10px 4px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    place-content: center;
+    overflow-x: hidden;
+  }
+  .title-login {
+    margin: 2rem;
+    font-size: 23px;
+    font-weight: 900;
+    color: black;
+  }
+  .input-email {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    gap: 2rem;
+  }
+
+  .input-email input {
+    padding: 13px 18px;
+    border: 1px solid grey;
+    color: black;
+    background: transparent;
+    box-shadow: 0px 5px 10px 4px rgba(0, 0, 0, 0.5);
+  }
+  .input-email input:hover {
+    border: 2px solid black;
+    place-content: center;
+  }
+  .submit-btn {
+    padding: 8px 11px;
+    color: white;
+    background-color: blue;
+    border: 1px solid black;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .submit-btn:hover {
+    border: 2px solid yellowgreen;
+  }
+  .google-btn {
+    width: 100px;
+    padding: 7px 10px;
+    color: white;
+    margin: 2rem 2rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .login-test-credential-btn {
+    width: 130px;
+    padding: 7px 10px;
+    color: rgb(22, 21, 21);
+    margin: 2rem;
+    border: 2px solid black;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .res-link {
+    margin: 2rem;
+    color: black;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .signupclick {
+    color: blue;
+    font-size: 17px;
+    font-weight: 600;
+  }
+}
+@media (max-width: 320px) {
+  body {
+    overflow-x: hidden;
+  }
+  .loginPage {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background: url(../../image/log.jpg) center/cover fixed;
+  }
+  .login {
+    width: 260px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    background-color: transparent;
+    margin: 3rem 0rem;
+    display: flex;
+    box-shadow: 0px 5px 10px 4px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    place-content: center;
+    overflow-x: hidden;
+  }
+  .title-login {
+    margin: 2rem;
+    font-size: 23px;
+    font-weight: 900;
+    color: black;
+  }
+  .input-email {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    gap: 2rem;
+  }
+
+  .input-email input {
+    padding: 8px 13px;
+    border: 1px solid grey;
+    color: black;
+    background: transparent;
+    box-shadow: 0px 5px 10px 4px rgba(0, 0, 0, 0.5);
+  }
+  .input-email input:hover {
+    border: 2px solid black;
+    place-content: center;
+  }
+  .submit-btn {
+    padding: 7px 8px;
+    color: white;
+    background-color: blue;
+    border: 1px solid black;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .submit-btn:hover {
+    border: 2px solid yellowgreen;
+  }
+  .google-btn {
+    width: 80px;
+    padding: 7px 10px;
+    color: white;
+    margin: 2rem 2rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .login-test-credential-btn {
+    width: 100px;
+    padding: 7px 10px;
+    color: rgb(22, 21, 21);
+    margin: 2rem;
+    border: 2px solid black;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .res-link {
+    margin: 2rem;
+    color: black;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .signupclick {
+    color: blue;
+    font-size: 17px;
+    font-weight: 600;
+  }
+}
+@media (max-width: 425px) {
+  body {
+    overflow-x: hidden;
+  }
+  .loginPage {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background: url(../../image/log.jpg) center/cover fixed;
+    overflow-x: hidden;
+  }
+  .login {
+    width: 280px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    background-color: transparent;
+    margin: 3rem 0rem;
+    display: flex;
+    box-shadow: 0px 5px 10px 4px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    place-content: center;
+  }
+  .title-login {
+    margin: 2rem;
+    font-size: 23px;
+    font-weight: 900;
+    color: black;
+  }
+  .input-email {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    gap: 2rem;
+  }
+
+  .input-email input {
+    padding: 8px 13px;
+    border: 1px solid grey;
+    color: black;
+    background: transparent;
+    box-shadow: 0px 5px 10px 4px rgba(0, 0, 0, 0.5);
+  }
+  .input-email input:hover {
+    border: 2px solid black;
+    place-content: center;
+  }
+  .submit-btn {
+    padding: 7px 8px;
+    color: white;
+    background-color: blue;
+    border: 1px solid black;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .submit-btn:hover {
+    border: 2px solid yellowgreen;
+  }
+  .google-btn {
+    width: 90px;
+    padding: 7px 10px;
+    color: white;
+    margin: 2rem 2rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .login-test-credential-btn {
+    width: 120px;
+    padding: 7px 10px;
+    color: rgb(22, 21, 21);
+    margin: 2rem;
+    border: 2px solid black;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .res-link {
+    margin: 2rem;
+    color: black;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .signupclick {
+    color: blue;
+    font-size: 17px;
+    font-weight: 600;
+  }
+}
+@media (max-width: 725px) {
+  body {
+    overflow-x: auto;
+  }
+  .loginPage {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background: url(../../image/log.jpg) center/cover fixed;
+  }
+  .login {
+    width: 430px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    background-color: transparent;
+    margin: 3rem 1rem;
+    display: flex;
+    box-shadow: 0px 5px 10px 4px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    place-content: center;
+  }
+  .title-login {
+    margin: 2rem;
+    font-size: 23px;
+    font-weight: 900;
+    color: black;
+  }
+  .input-email {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    gap: 2rem;
+  }
+
+  .input-email input {
+    width: 270px;
+    padding: 13px 22px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    color: black;
+    background: transparent;
+    box-shadow: 0px 5px 10px 4px rgba(0, 0, 0, 0.5);
+  }
+  .input-email input:hover {
+    border: 2px solid black;
+    place-content: center;
+  }
+  .submit-btn {
+    padding: 8px 11px;
+    color: white;
+    background-color: blue;
+    border: 1px solid black;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .submit-btn:hover {
+    border: 2px solid yellowgreen;
+  }
+  .google-btn {
+    width: 120px;
+    padding: 7px 10px;
+    color: white;
+    margin: 2rem 2rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .login-test-credential-btn {
+    width: 150px;
+    padding: 7px 10px;
+    color: black;
+    margin: 2rem;
+    border: 2px solid black;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+  }
+
+  .res-link {
+    margin: 2rem;
+    color: black;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .signupclick {
+    color: blue;
+    font-size: 17px;
+    font-weight: 600;
+  }
+}
+@media (max-width: 1024px) {
+  body {
+    overflow-x: auto;
+  }
+  .loginPage {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background: url(../../image/log.jpg) center/cover fixed;
+  }
+  .login {
+    width: 430px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    background-color: transparent;
+    margin: 3rem 1rem;
+    display: flex;
+    box-shadow: 0px 5px 10px 4px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    place-content: center;
+  }
+  .title-login {
+    margin: 2rem;
+    font-size: 23px;
+    font-weight: 900;
+    color: black;
+  }
+  .input-email {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    gap: 2rem;
+  }
+
+  .input-email input {
+    width: 270px;
+    padding: 13px 22px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    color: black;
+    background: transparent;
+    box-shadow: 0px 5px 10px 4px rgba(0, 0, 0, 0.5);
+  }
+  .input-email input:hover {
+    border: 2px solid black;
+    place-content: center;
+  }
+  .submit-btn {
+    padding: 8px 11px;
+    color: white;
+    background-color: blue;
+    border: 1px solid black;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .submit-btn:hover {
+    border: 2px solid yellowgreen;
+  }
+  .google-btn {
+    width: 120px;
+    padding: 7px 10px;
+    color: white;
+    margin: 2rem 2rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .login-test-credential-btn {
+    width: 150px;
+    padding: 7px 10px;
+    color: black;
+    margin: 2rem;
+    border: 2px solid black;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+  }
+
+  .res-link {
+    margin: 2rem;
+    color: black;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .signupclick {
+    color: blue;
+    font-size: 17px;
+    font-weight: 600;
+  }
+}

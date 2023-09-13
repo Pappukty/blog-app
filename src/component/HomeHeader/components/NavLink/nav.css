@@ -1,0 +1,107 @@
+.nav {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-item {
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  background-color: blueviolet;
+  height: 60px;
+  gap: 8rem;
+}
+.nav-item button {
+  background-color: palevioletred;
+  margin-left: 7rem;
+  border-radius: 5px;
+}
+.icon {
+  color: blue;
+}
+
+.nav-blg {
+  font-size: 27px;
+  font-weight: 900;
+  margin-right: 10rem;
+}
+.nav-blg span {
+  color: red;
+}
+
+.create-icon {
+  margin-left: 13rem;
+  font-size: 29px;
+  font-weight: 900;
+  color: palevioletred;
+}
+.plus {
+  font-size: 35px;
+  font-weight: 900;
+}
+.nav {
+  color: white;
+  font-size: 19px;
+  font-weight: 700;
+  display: flex;
+  padding: 0.2rem;
+  justify-content: center;
+}
+.nav-link {
+  color: white;
+  gap: 1rem;
+  position: absolute;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  top: 60px;
+  border: 1px solid gray;
+  box-shadow: 5px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+.nav-link li {
+  color: goldenrod;
+  gap: 7rem;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  justify-content: center;
+  text-decoration: none;
+  padding: 9px 13px;
+  border-bottom: 1px solid gray;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.nav-link li:hover {
+  color: blue;
+}
+.icon-pr {
+  color: white;
+  background-color: brown;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+.profile-cr-log {
+  font-size: 20px;
+  font-weight: 900;
+  color: azure;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+.profile-cr-log h5 {
+  text-decoration: none;
+}
+.profile-icon-cr-log {
+  font-size: 30px;
+  font-weight: 900;
+  color: azure;
+}
