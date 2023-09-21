@@ -9,6 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useNavigate, Link } from "react-router-dom";
 const Edit = () => {
   const { editPost } = useStateContext();
+  console.log(editPost);
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [postText, setPostText] = useState("");
@@ -26,9 +27,9 @@ const Edit = () => {
       await updateDoc(documentRef, modifiedField);
     } catch (err) {
       console.log(err);
-      toast.success("Successfully Clear Cart");
     }
     navigate("/");
+    toast.success("update successfully");
   };
 
   const onTitleChange = (e) => {
@@ -42,12 +43,7 @@ const Edit = () => {
 
   return (
     <>
-      <div className="createPostPage">
-        <Link to="/home">
-          {" "}
-          <button>home</button>
-        </Link>
-
+      <div className="create">
         <div className="cpContainer">
           <h1>Create A Post</h1>
           <div className="inputGp">

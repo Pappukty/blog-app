@@ -1,192 +1,9 @@
-/* body {
-  background: url(../../image/home.jpg);
-} */
-/* body {
-  background: url(../../image/home.jpg) center/cover fixed;
-} */
-/* .homepage {
-  width: 600px;
-  min-height: calc(100vh-80px);
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 20px;
-  margin-top: 2rem;
-  position: relative;
-  left: 400px;
-}
-.home-hd {
-  width: 100%;
-  height: 70px;
-  background-color: blueviolet;
-  display: flex;
-  gap: 20rem;
-  align-items: center;
-  justify-content: center;
-}
-.createnav {
-  font-size: 17px;
-  font-weight: 700;
-  color: rgb(20, 19, 19);
-  background: rgb(131, 58, 180);
-  background: linear-gradient(
-    90deg,
-    rgba(131, 58, 180, 1) 0%,
-    rgba(29, 253, 209, 0.9304096638655462) 50%,
-    rgba(252, 176, 69, 1) 100%
-  );
-  border-radius: 3px;
-}
-.logoutNav {
-  padding: 5px 10px;
-  background-color: #c8dafc;
-  color: darkcyan;
-  border: none;
-  cursor: pointer;
-  font-size: 13px;
-  font-weight: 700;
-}
-.logoutNav:hover {
-  border: 2px solid deeppink;
-  color: black;
-}
-.useraccount {
-  position: relative;
-}
-.usernav {
-  position: relative;
-  bottom: 30px;
-}
-.userlogo {
-  position: relative;
-  top: 10px;
-  border-radius: 50%;
-  right: 40px;
-}
-.ti-bl {
-  position: relative;
-  left: 20px;
-  font-size: 23px;
-  font-weight: 800;
-}
-.post {
-  width: 600px;
-  height: auto;
-  max-height: 600px;
-  background-color: rgb(250, 250, 250);
-  box-shadow: rgba(0, 0, 0, 0.24);
-  margin: 2rem;
-  gap: 2rem;
-  padding: 20px;
-  border-radius: 15px;
-  margin-top: 2rem;
-  border: 1px solid gray;
-  box-shadow: 0px 5px 10px 0px Rgba(0, 0, 0, 0.5);
-}
-.postHeader {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-.postHeader.title {
-  flex: 50%;
-}
-.postHeader .deletepost {
-  flex: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.deletepost button {
-  border: none;
-  background: none;
-  font-size: 34px;
-  font-weight: 800;
-  cursor: pointer;
-
-  bottom: 700px;
-  color: red;
-}
-.update-btn button {
-  border: none;
-  background: none;
-  font-size: 34px;
-  font-weight: 800;
-  cursor: pointer;
-  margin-left: 29rem;
-  bottom: 900px;
-  color: green;
-  margin-top: -700px;
-}
-.post .postTextContainer {
-  word-wrap: break-word;
-  height: auto;
-  max-height: 400px;
-  width: 100%;
-  overflow: hidden;
-  overflow-y: auto;
-} */
-@media (max-width: 320px) {
-  /* .back-hd {
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-  }
-  .home {
-    width: 320px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: auto;
-  }
-  .home-hd {
-    width: 100%;
-    height: 50px;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    display: flex;
-  }
-  .post {
-    width: 200px;
-    height: 300px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    margin-left: -3rem;
-  } */
-}
-
-.back-hd {
-  width: 100%;
-  height: auto;
+.home {
   justify-content: center;
   align-items: center;
   display: flex;
-  flex-direction: column;
-}
-
-.ti-bl {
-  margin-top: 1rem;
-  font-size: 25px;
-  font-weight: 800;
-  display: flex;
-}
-.useraccount {
-  display: flex;
-  color: black;
-  gap: 5rem;
-}
-
-.usernav {
-  color: white;
-  margin-top: -1rem;
-  font-size: 19px;
-  font-weight: 700;
+  width: 100vw;
+  background-color: rgb(249, 243, 186);
 }
 .homepage {
   width: 100%;
@@ -195,40 +12,28 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  background-color: rgb(240, 235, 190);
 }
-.usernav {
-  position: relative;
-  bottom: 30px;
+.welcome {
+  width: 100%;
+  margin: 1 rem auto;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
-.userlogo {
-  border-radius: 50%;
-  right: 40px;
-  position: relative;
+.welcome h1 {
+  width: 80%;
+  font-size: 59px;
+  font-weight: 900;
+  margin: 2rem auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: cornflowerblue;
 }
-.createnav {
-  font-size: 17px;
-  font-weight: 700;
-  color: rgb(20, 19, 19);
-  background: rgb(131, 58, 180);
-  background: linear-gradient(
-    90deg,
-    rgba(131, 58, 180, 1) 0%,
-    rgba(29, 253, 209, 0.9304096638655462) 50%,
-    rgba(252, 176, 69, 1) 100%
-  );
-  border-radius: 3px;
-  margin-top: 1rem;
-}
-.logout-btn {
-  background-color: #c8dafc;
-  color: darkcyan;
-  padding: 5px 10px;
-  height: 30px;
-  margin-top: 1rem;
-}
-.logout-btn:hover {
-  color: red;
-  border: 2px solid blue;
+.welcome h1 .book {
+  color: darkmagenta;
 }
 .post {
   width: 600px;
@@ -241,6 +46,7 @@
   padding: 20px;
   border-radius: 15px;
   margin-top: 2rem;
+  cursor: pointer;
   border: 1px solid gray;
   box-shadow: 0px 5px 10px 0px Rgba(0, 0, 0, 0.5);
 }
@@ -251,34 +57,31 @@
   width: 100%;
 }
 .postHeader.title {
-  flex: 50%;
+  width: 100%;
 }
-.postHeader .deletepost {
-  flex: 50%;
+.btn-container {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
 }
-.deletepost button {
+.delete-btn {
+  border: none;
+
+  font-size: 34px;
+  font-weight: 800;
+  cursor: pointer;
+
+  color: red;
+}
+.update-btn {
   border: none;
   background: none;
   font-size: 34px;
   font-weight: 800;
   cursor: pointer;
 
-  bottom: 700px;
-  color: red;
-}
-.update-btn button {
-  border: none;
-  background: none;
-  font-size: 34px;
-  font-weight: 800;
-  cursor: pointer;
-  margin-left: 29rem;
-  bottom: 900px;
   color: green;
-  margin-top: -700px;
 }
 .post .postTextContainer {
   word-wrap: break-word;
@@ -288,650 +91,53 @@
   overflow: hidden;
   overflow-y: auto;
 }
-@media (max-width: 320px) {
-  .back-hd {
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-  }
-  .home-hd {
-    width: 20rem;
-    height: 60px;
-    display: flex;
-    background-color: blueviolet;
-    gap: 0.5rem;
-  }
-  .ti-bl {
-    margin-top: 1rem;
-    font-size: 18px;
-    font-weight: 800;
-  }
-  .useraccount {
-    display: flex;
-    color: black;
-    gap: 5rem;
-  }
-
-  .usernav {
-    color: red;
-  }
-  .homepage {
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-  }
-  .usernav {
-    position: relative;
-    bottom: 30px;
-  }
-  .userlogo {
-    border-radius: 50%;
-    right: 40px;
-    position: relative;
-  }
-  .createnav {
-    font-size: 17px;
-    font-weight: 700;
-    color: rgb(20, 19, 19);
-    background: rgb(131, 58, 180);
-    background: linear-gradient(
-      90deg,
-      rgba(131, 58, 180, 1) 0%,
-      rgba(29, 253, 209, 0.9304096638655462) 50%,
-      rgba(252, 176, 69, 1) 100%
-    );
-    border-radius: 3px;
-    margin-top: 1rem;
-  }
-  .logout-btn {
-    background-color: #c8dafc;
-    color: darkcyan;
-    padding: 5px 10px;
-    height: 30px;
-    margin-top: 1rem;
-  }
-  .logout-btn:hover {
-    color: red;
-    border: 2px solid blue;
-  }
-  .post {
-    width: 270px;
-    height: auto;
-
-    background-color: rgb(250, 250, 250);
-    box-shadow: rgba(0, 0, 0, 0.24);
-    margin: 2rem;
-    gap: 2rem;
-    padding: 20px;
-    border-radius: 15px;
-    margin-top: 2rem;
-    border: 1px solid gray;
-    box-shadow: 0px 5px 10px 0px Rgba(0, 0, 0, 0.5);
-  }
-
-  .postHeader {
-    display: flex;
-    justify-content: center;
-    width: 60%;
-  }
-
-  .postHeader .deletepost {
-    flex: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  .deletepost button {
-    border: none;
-    background: none;
-    font-size: 34px;
-    font-weight: 800;
-    cursor: pointer;
-
-    bottom: 700px;
-    color: red;
-  }
-  .update-btn button {
-    border: none;
-    background: none;
-    font-size: 34px;
-    font-weight: 800;
-    cursor: pointer;
-    margin-left: 7rem;
-    bottom: 900px;
-    color: green;
-    margin-top: -700px;
-  }
-  .post .postTextContainer {
-    word-wrap: break-word;
-    height: auto;
-    max-height: 400px;
-    width: 100%;
-
-    overflow-y: auto;
-  }
+.read {
+  display: flex;
+  align-items: center;
 }
-@media (max-width: 375px) {
-  .back-hd {
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-  }
-  .home-hd {
-    width: 23rem;
-    height: 60px;
-    display: flex;
-    background-color: blueviolet;
-    gap: 1rem;
-  }
-  .ti-bl {
-    margin-top: 1rem;
-    font-size: 18px;
-    font-weight: 800;
-  }
-  .useraccount {
-    display: flex;
-    color: black;
-    gap: 5rem;
-  }
-
-  .usernav {
-    color: red;
-  }
-  .homepage {
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-  }
-  .usernav {
-    position: relative;
-    bottom: 30px;
-  }
-  .userlogo {
-    border-radius: 50%;
-    right: 40px;
-    position: relative;
-  }
-  .createnav {
-    font-size: 17px;
-    font-weight: 700;
-    color: rgb(20, 19, 19);
-    background: rgb(131, 58, 180);
-    background: linear-gradient(
-      90deg,
-      rgba(131, 58, 180, 1) 0%,
-      rgba(29, 253, 209, 0.9304096638655462) 50%,
-      rgba(252, 176, 69, 1) 100%
-    );
-    border-radius: 3px;
-    margin-top: 1rem;
-  }
-  .logout-btn {
-    background-color: #c8dafc;
-    color: darkcyan;
-    padding: 5px 10px;
-    height: 30px;
-    margin-top: 1rem;
-  }
-  .logout-btn:hover {
-    color: red;
-    border: 2px solid blue;
-  }
-  .post {
-    width: 290px;
-    height: auto;
-
-    background-color: rgb(250, 250, 250);
-    box-shadow: rgba(0, 0, 0, 0.24);
-    margin: 2rem;
-    gap: 2rem;
-    padding: 20px;
-    border-radius: 15px;
-    margin-top: 2rem;
-    border: 1px solid gray;
-    box-shadow: 0px 5px 10px 0px Rgba(0, 0, 0, 0.5);
-  }
-
-  .postHeader {
-    display: flex;
-    justify-content: center;
-    width: 60%;
-  }
-
-  .postHeader .deletepost {
-    flex: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  .deletepost button {
-    border: none;
-    background: none;
-    font-size: 34px;
-    font-weight: 800;
-    cursor: pointer;
-
-    bottom: 700px;
-    color: red;
-  }
-  .update-btn button {
-    border: none;
-    background: none;
-    font-size: 34px;
-    font-weight: 800;
-    cursor: pointer;
-    margin-left: 13rem;
-    bottom: 900px;
-    color: green;
-    margin-top: -700px;
-  }
-  .post .postTextContainer {
-    word-wrap: break-word;
-    height: auto;
-    max-height: 400px;
-    width: 100%;
-
-    overflow-y: auto;
-  }
-}
-@media (max-width: 425px) {
-  .back-hd {
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-  }
-  .home-hd {
-    width: 26.3rem;
-    height: 60px;
-    display: flex;
-    background-color: blueviolet;
-    gap: 1rem;
-  }
-  .ti-bl {
-    margin-top: 1rem;
-    font-size: 18px;
-    font-weight: 800;
-  }
-  .useraccount {
-    display: flex;
-    color: black;
-    gap: 5rem;
-  }
-
-  .usernav {
-    color: red;
-  }
-  .homepage {
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-  }
-  .usernav {
-    position: relative;
-    bottom: 30px;
-  }
-  .userlogo {
-    border-radius: 50%;
-    right: 40px;
-    position: relative;
-  }
-  .createnav {
-    font-size: 17px;
-    font-weight: 700;
-    color: rgb(20, 19, 19);
-    background: rgb(131, 58, 180);
-    background: linear-gradient(
-      90deg,
-      rgba(131, 58, 180, 1) 0%,
-      rgba(29, 253, 209, 0.9304096638655462) 50%,
-      rgba(252, 176, 69, 1) 100%
-    );
-    border-radius: 3px;
-    margin-top: 1rem;
-  }
-  .logout-btn {
-    background-color: #c8dafc;
-    color: darkcyan;
-    padding: 5px 10px;
-    height: 30px;
-    margin-top: 1rem;
-  }
-  .logout-btn:hover {
-    color: red;
-    border: 2px solid blue;
-  }
-  .post {
-    width: 290px;
-    height: auto;
-
-    background-color: rgb(250, 250, 250);
-    box-shadow: rgba(0, 0, 0, 0.24);
-    margin: 2rem;
-    gap: 2rem;
-    padding: 20px;
-    border-radius: 15px;
-    margin-top: 2rem;
-    border: 1px solid gray;
-    box-shadow: 0px 5px 10px 0px Rgba(0, 0, 0, 0.5);
-  }
-
-  .postHeader {
-    display: flex;
-    justify-content: center;
-    width: 60%;
-  }
-
-  .postHeader .deletepost {
-    flex: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  .deletepost button {
-    border: none;
-    background: none;
-    font-size: 34px;
-    font-weight: 800;
-    cursor: pointer;
-
-    bottom: 700px;
-    color: red;
-  }
-  .update-btn button {
-    border: none;
-    background: none;
-    font-size: 34px;
-    font-weight: 800;
-    cursor: pointer;
-    margin-left: 13rem;
-    bottom: 900px;
-    color: green;
-    margin-top: -700px;
-  }
-  .post .postTextContainer {
-    word-wrap: break-word;
-    height: auto;
-    max-height: 400px;
-    width: 100%;
-
-    overflow-y: auto;
-  }
+.read-post {
+  color: blue;
+  font: 19px;
+  font-weight: 500;
 }
 @media (max-width: 768px) {
-  .back-hd {
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-  }
-  .home-hd {
-    width: 47.5rem;
-    height: 60px;
-    display: flex;
-    background-color: blueviolet;
-    gap: 10rem;
-  }
-  .ti-bl {
-    margin-top: 1rem;
-    font-size: 18px;
-    font-weight: 800;
-  }
-  .useraccount {
-    display: flex;
-    color: black;
-    gap: 5rem;
-  }
-
-  .usernav {
-    color: red;
-  }
-  .homepage {
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-  }
-  .usernav {
-    position: relative;
-    bottom: 30px;
-  }
-  .userlogo {
-    border-radius: 50%;
-    right: 40px;
-    position: relative;
-  }
-  .createnav {
-    font-size: 17px;
-    font-weight: 700;
-    color: rgb(20, 19, 19);
-    background: rgb(131, 58, 180);
-    background: linear-gradient(
-      90deg,
-      rgba(131, 58, 180, 1) 0%,
-      rgba(29, 253, 209, 0.9304096638655462) 50%,
-      rgba(252, 176, 69, 1) 100%
-    );
-    border-radius: 3px;
-    margin-top: 1rem;
-  }
-  .logout-btn {
-    background-color: #c8dafc;
-    color: darkcyan;
-    padding: 5px 10px;
-    height: 30px;
-    margin-top: 1rem;
-  }
-  .logout-btn:hover {
-    color: red;
-    border: 2px solid blue;
-  }
   .post {
-    width: 390px;
-    height: auto;
-
-    background-color: rgb(250, 250, 250);
-    box-shadow: rgba(0, 0, 0, 0.24);
-    margin: 2rem;
-    gap: 2rem;
-    padding: 20px;
-    border-radius: 15px;
-    margin-top: 2rem;
-    border: 1px solid gray;
-    box-shadow: 0px 5px 10px 0px Rgba(0, 0, 0, 0.5);
+    width: 90%;
+    margin: 1rem auto;
+    overflow: auto;
   }
-
-  .postHeader {
+  .welcome {
+    width: 100%;
+    margin: 1 rem auto;
+    text-align: center;
+    align-items: center;
     display: flex;
     justify-content: center;
-    width: 60%;
   }
-
-  .postHeader .deletepost {
-    flex: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+  .welcome h1 {
+    width: 80%;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 2rem auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: cornflowerblue;
   }
-  .deletepost button {
-    border: none;
-    background: none;
-    font-size: 34px;
-    font-weight: 800;
-    cursor: pointer;
-
-    bottom: 700px;
-    color: red;
+  .welcome h1 .book {
+    color: darkmagenta;
   }
   .update-btn button {
-    border: none;
-    background: none;
-    font-size: 34px;
-    font-weight: 800;
-    cursor: pointer;
-    margin-left: 18rem;
-    bottom: 900px;
-    color: green;
-    margin-top: -700px;
+    width: 200%;
   }
-  .post .postTextContainer {
-    word-wrap: break-word;
-    height: auto;
-    max-height: 400px;
-    width: 100%;
-
-    overflow-y: auto;
-  }
-}
-@media (max-width: 1024px) {
-  .back-hd {
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-  }
-  .home-hd {
-    width: 63.5rem;
-    height: 60px;
-    display: flex;
-    background-color: blueviolet;
-    gap: 15rem;
-  }
-  .ti-bl {
-    margin-top: 1rem;
-    font-size: 18px;
-    font-weight: 800;
-  }
-  .useraccount {
-    display: flex;
-    color: black;
-    gap: 5rem;
-  }
-
-  .usernav {
-    color: red;
-  }
-  .homepage {
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-  }
-  .usernav {
-    position: relative;
-    bottom: 30px;
-  }
-  .userlogo {
-    border-radius: 50%;
-    right: 40px;
-    position: relative;
-  }
-  .createnav {
-    font-size: 17px;
-    font-weight: 700;
-    color: rgb(20, 19, 19);
-    background: rgb(131, 58, 180);
-    background: linear-gradient(
-      90deg,
-      rgba(131, 58, 180, 1) 0%,
-      rgba(29, 253, 209, 0.9304096638655462) 50%,
-      rgba(252, 176, 69, 1) 100%
-    );
-    border-radius: 3px;
-    margin-top: 1rem;
-  }
-  .logout-btn {
-    background-color: #c8dafc;
-    color: darkcyan;
-    padding: 5px 10px;
-    height: 30px;
-    margin-top: 1rem;
-  }
-  .logout-btn:hover {
-    color: red;
-    border: 2px solid blue;
-  }
-  .post {
-    width: 530px;
-    height: auto;
-    min-height: 100%;
-    background-color: rgb(250, 250, 250);
-    box-shadow: rgba(0, 0, 0, 0.24);
-    margin: 2rem;
-    gap: 2rem;
-    padding: 20px;
-    border-radius: 15px;
-    margin-top: 2rem;
-    border: 1px solid gray;
-    box-shadow: 0px 5px 10px 0px Rgba(0, 0, 0, 0.5);
-  }
-
   .postHeader {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    width: 96%;
   }
-
-  .postHeader .deletepost {
-    flex: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  .deletepost button {
-    border: none;
-    background: none;
-    font-size: 34px;
-    font-weight: 800;
-    cursor: pointer;
-
-    bottom: 700px;
-    color: red;
-  }
-  .update-btn button {
-    border: none;
-    background: none;
-    font-size: 34px;
-    font-weight: 800;
-    cursor: pointer;
-    margin-left: 18rem;
-    bottom: 900px;
-    color: green;
-    margin-top: -700px;
-  }
-  .post .postTextContainer {
-    word-wrap: break-word;
-    height: auto;
-    max-height: 400px;
-    width: 100%;
-
-    overflow-y: auto;
+  .postHeader.title {
+    width: 70%;
+    font-size: 16px;
+    font-weight: 600;
   }
 }

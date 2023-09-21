@@ -1,40 +1,43 @@
 .nav {
-  width: 100%;
+  width: 100vw;
+  background-color: blueviolet;
   align-items: center;
   justify-content: center;
   display: flex;
-  flex-direction: column;
 }
 
 .nav-item {
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   display: flex;
-  width: 100%;
-  background-color: blueviolet;
+  width: 90%;
+
   height: 60px;
-  gap: 8rem;
+  margin: 0 auto;
 }
 .nav-item button {
   background-color: palevioletred;
-  margin-left: 7rem;
+
   border-radius: 5px;
 }
 .icon {
   color: blue;
 }
 
-.nav-blg {
+.nav-blg h3 {
   font-size: 27px;
   font-weight: 900;
-  margin-right: 10rem;
+
+  color: black;
+}
+.nav-blg h3:hover {
+  color: yellow;
 }
 .nav-blg span {
   color: red;
 }
 
 .create-icon {
-  margin-left: 13rem;
   font-size: 29px;
   font-weight: 900;
   color: palevioletred;
@@ -43,7 +46,7 @@
   font-size: 35px;
   font-weight: 900;
 }
-.nav {
+.nav-nv {
   color: white;
   font-size: 19px;
   font-weight: 700;
@@ -55,7 +58,7 @@
   color: white;
   gap: 1rem;
   position: absolute;
-  right: 40px;
+  right: 45px;
   display: flex;
   flex-direction: column;
   top: 60px;
@@ -89,8 +92,8 @@
   border-radius: 5px;
 }
 .profile-cr-log {
-  font-size: 20px;
-  font-weight: 900;
+  font-size: 15px;
+  font-weight: 700;
   color: azure;
   justify-content: center;
   align-items: center;
@@ -104,4 +107,15 @@
   font-size: 30px;
   font-weight: 900;
   color: azure;
+}
+@media (max-width: 768px) {
+  .nav-item button {
+    width: 70%;
+  }
+  .nav-blg h3 {
+    width: 90%;
+  }
+  .create-icon {
+    width: 80%;
+  }
 }

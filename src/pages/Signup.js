@@ -55,7 +55,7 @@ const Signup = () => {
       <form className="register">
         <h1 className="title">Register</h1>
         <div className="inputRegister">
-          <div>
+          {/* <div>
             <label htmlFor="userName"></label>
             <input
               type="text"
@@ -65,7 +65,7 @@ const Signup = () => {
               onChange={(e) => setUserName(e.target.value)}
               required
             />
-          </div>
+          </div> */}
           <div>
             <label htmlFor="email address"></label>
             <input
@@ -88,27 +88,27 @@ const Signup = () => {
               required
             />
           </div>
-          <div>
+          {/* <div>
             <label htmlFor="confirmPassword"></label>
-            <input
+            {/* <input
               type="Password"
               label="confirmPassword"
               placeholder="confirm Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-            />
-          </div>
-          <input
+            /> */}
+
+          {/* <input
             type="number"
             placeholder="Mobile Number"
             value={number}
             onChange={(e) => setNumber(e.target.value)}
             required
-          />
+          /> */}
         </div>
         <div className="select">
-          <label for="choose">choose Gender</label>
+          {/* <label for="choose">choose Gender</label>
           <select
             value={gender}
             onChange={(e) => setGender(e.target.value)}
@@ -119,12 +119,12 @@ const Signup = () => {
             <option value="male">male</option>
             <option value="female">female</option>
             <option value="others">others</option>
-          </select>
+          </select> */}
         </div>
 
         <b className="error">{errorMsg}</b>
         <div className="btn">
-          <button className="submit-btn" type="submit" onClick={onSubmit}>
+          <button className="submit-btn-sign" type="submit" onClick={onSubmit}>
             Submit
           </button>
           <button className="reset-btn" onClick={handelReset}>

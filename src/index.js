@@ -3,12 +3,14 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import { StateProvider } from "./contexts/context";
-
+import { UserProvider } from "./contexts/userContext";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <StateProvider>
-      <App />
+      <UserProvider>
+        <App />
+      </UserProvider>
     </StateProvider>
   </React.StrictMode>
 );

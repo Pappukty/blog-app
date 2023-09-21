@@ -23,8 +23,5 @@ code {
     monospace;
 }
 body {
-  width: 100vw;
-  min-height: 100vh;
   font-family: var(--font-family);
-  overflow-x: hidden;
 }

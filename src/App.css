@@ -8,20 +8,6 @@ body {
   margin: 0%;
 }
 
-.iblog {
-  font-size: 20px;
-  font-weight: 800;
-
-  position: relative;
-  top: 5px;
-  right: 500px;
-  color: white;
-}
-.login-ap {
-  position: relative;
-  left: 500px;
-}
-
 /* @media screen and (min-width: 600px) {
   .nav {
     margin: 0;

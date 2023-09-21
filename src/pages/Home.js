@@ -7,13 +7,17 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import { Link } from "react-router-dom";
+import { FaBookReader } from "react-icons/fa";
 import { db, auth } from "../firebase-config";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { Navigate, useNavigate } from "react-router-dom";
+import { AiFillDelete } from "react-icons/ai";
 import userLogo from "../image/images (1).jpg";
 import { FaEdit } from "react-icons/fa";
 import "./style/Home.css";
+import { toast } from "react-toastify";
 
+import "react-toastify/dist/ReactToastify.css";
 import { useStateContext } from "../contexts/context";
 
 function Home(isAuth) {
@@ -22,7 +26,7 @@ function Home(isAuth) {
   const postsCollectionRef = collection(db, "posts");
   const Navigate = useNavigate();
   const [name, setName] = useState("");
-  const { setEditPost } = useStateContext();
+  const { setEditPost, setSinglePost } = useStateContext();
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -48,71 +52,70 @@ function Home(isAuth) {
     };
     getPosts();
   }, []);
+
   const deletepost = async (id) => {
-    const postDoc = doc(db, "posts", id);
-    await deleteDoc(postDoc);
+    try {
+      const postDoc = doc(db, "posts", id);
+      await deleteDoc(postDoc);
+      toast.success("Blog Deleted SuccessFully !");
+    } catch (error) {
+      console.log(error);
+    }
   };
+
   const updateposts = (posts) => {
-    // const postDoc = doc(db, "posts", id);
-    // try {
-    //   await updateDoc(postDoc);
-    // } catch (err) {
-    //   setError(err.message);
-    // }
     setEditPost(posts);
 
     Navigate("/edit");
-    console.log();
+    console.log(posts);
+  };
+  const handelClickPost = (posts) => {
+    // Navigate(`/post/${posts.id}`, { state: posts });
+    console.log(posts);
+    setSinglePost(posts);
+    Navigate("/postdetails");
   };
 
   return (
     <>
-      <div className="back-hd">
-        <div className="home-hd">
-          <h6 className="usernav"></h6>
-
-          {/* <section className="name">{name}</section> */}
+      <div className="home">
+        <div className="welcome">
+          <h1>
+            <span> welcome to blog</span> <FaBookReader className="book" />
+          </h1>
         </div>
+      </div>
 
-        <div className="homepage">
-          {/* <h2>{props.name ? `welcome-${props.name}` : "Login place"} </h2> */}
-          {postLists.map((posts) => {
-            return (
-              <div className="post">
+      <div className="homepage">
+        {/* <h2>{props.name ? `welcome-${props.name}` : "Login place"} </h2> */}
+        {postLists.map((posts) => {
+          return (
+            <div className="post">
+              {""}
+              <div className="postHeader" key={posts.id}>
                 {""}
-                <div className="postHeader" key={posts.id}>
-                  {""}
 
-                  <div className="title">
-                    <h1>{posts.title}</h1>
-                  </div>
+                <div className="title">
+                  <h1>{posts.title}</h1>
                 </div>
-                {/* <div className="deletepost">
-                {isAuth && posts.author.id === auth.currentUser.uid && (
+              </div>
+
+              <div className="btn-container">
+                {/* {isAuth && postLists.author.id === auth.currentUser.uid && ( */}
+                <button
+                  className="delete-btn"
+                  onClick={() => {
+                    deletepost(posts.id);
+                  }}
+                >
+                  {""}
+                  &#128465;
+                  {/* <AiFillDelete /> */}
+                </button>
+
+                <div>
                   <button
-                    onClick={() => {
-                      deletepost(posts.id);
-                    }}
-                  >
-                    {''}
-                    &#128465;
-                    
-                  </button>
-                )}
-              </div> */}
-                <div className="deletepost">
-                  {/* {isAuth && postLists.author.id === auth.currentUser.uid && ( */}
-                  <button
-                    onClick={() => {
-                      deletepost(posts);
-                    }}
-                  >
-                    {""}
-                    &#128465;
-                  </button>
-                </div>
-                <div className="update-btn">
-                  <button
+                    className="update-btn"
                     onClick={() => {
                       updateposts(posts);
                     }}
@@ -120,13 +123,24 @@ function Home(isAuth) {
                     <FaEdit />
                   </button>
                 </div>
-
-                <div className="postTextContainer">{posts.postText}</div>
-                <h3>@{posts.author.name}</h3>
               </div>
-            );
-          })}
-        </div>
+
+              <div className="postTextContainer">{posts.postText}</div>
+              {/* <h3>@{posts.author.name}</h3> */}
+              {<h3>@{posts.author.name}</h3>}
+              <div className="read">
+                <span
+                  className="read-post"
+                  onClick={() => {
+                    handelClickPost(posts);
+                  }}
+                >
+                  Readmore
+                </span>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </>
   );

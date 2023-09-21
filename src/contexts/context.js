@@ -5,9 +5,11 @@ const StateContext = createContext();
 
 const StateProvider = ({ children }) => {
   const [editPost, setEditPost] = useState();
-  const [userLogin, setUserLogin] = useState(null);
+  const [userLogin, setUserLogin] = useState(false);
+  const [isAuth, setIsAuth] = useState(false);
+  const [singlePost, setSinglePost] = useState();
   //username
-  const [userName, setUserName] = useState("");
+  const [userName, setUserName] = useState(null);
 
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
@@ -17,7 +19,7 @@ const StateProvider = ({ children }) => {
       } else setUserName("");
     });
   }, []);
-  //local storage
+  // local storage
   const fetchLoginInfo = () => {
     const LoginInfo =
       localStorage.getItem("userLogin") !== "undefined"
@@ -41,6 +43,10 @@ const StateProvider = ({ children }) => {
         setUserLogin,
         userName,
         setUserName,
+        isAuth,
+        setIsAuth,
+        singlePost,
+        setSinglePost,
       }}
     >
       {children}

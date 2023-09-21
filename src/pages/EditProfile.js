@@ -1,43 +1,94 @@
 import { UserConsumer } from "../contexts/userContext";
-
+import "./style/EditProfile.css";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
-import { signOut } from "firebase/auth";
-import { auth } from "../firebase-config";
+
+import { doc, updateDoc } from "firebase/firestore";
+import { db, auth } from "../firebase-config";
+import { setProfileData } from "../utils/firebaseFunction";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useEffect } from "react";
-import "./style/UserAccount.css";
-const UserAccount = () => {
+
+const EditProfile = () => {
   const {
+    profileData,
+    setUserLoginData,
     id,
     name,
+    setName,
     email,
     selectCity,
+    setSelectCity,
     newState,
+    setNewState,
     address,
+    setAddress,
     gender,
+    setGender,
     image,
     number,
+    setNumber,
+    getImageUrl,
     isEditing,
-    setUserLoginData,
+    emptyValue,
+    setIsEditing,
+    profile,
+    fetchProfileData,
     userProfile,
-    profileData,
   } = UserConsumer();
 
   useEffect(() => {
     userProfile();
-    console.log("abig");
-  }, [profileData]);
+  }, []);
 
   const navigate = useNavigate();
 
-  const signOutGoogle = () => {
-    signOut(auth);
-    setUserLoginData(null);
-    navigate("/");
-  };
+  const addProfileData = async () => {
+    if (name && number && selectCity && gender && image) {
+      if (number.length === 10) {
+        if (!isEditing) {
+          const data = {
+            id: auth.currentUser.uid,
+            name,
+            email,
+            number,
+            image,
+            selectCity,
 
-  const doneBtn = () => {
-    navigate("/");
+            gender,
+          };
+          setProfileData(data);
+          emptyValue();
+          navigate("/");
+          fetchProfileData();
+          toast.success("Successfully Add New Profile");
+        } else {
+          try {
+            const itemToEditRef = doc(db, "profileData", profile);
+            await updateDoc(itemToEditRef, {
+              id,
+              name,
+              email,
+              number,
+              image,
+              selectCity,
+
+              gender,
+            });
+          } catch (error) {
+            console.log(error);
+          }
+          emptyValue();
+          navigate("/");
+          fetchProfileData();
+          toast.success("Profile Update Successfully");
+        }
+      } else {
+        toast.warning("Enter a valid number!");
+      }
+    } else {
+      toast.error("Input Field Is Mandatory!");
+    }
   };
 
   return (
@@ -49,7 +100,7 @@ const UserAccount = () => {
 
         <from className="profile-data-us">
           <h1>Your Profile</h1>
-          <div className="profile-row-readonly-us">
+          <div className="profile-row">
             {/* <div className="profile-id">
             <label htmlFor="id">ID</label>
             <input
@@ -70,12 +121,12 @@ const UserAccount = () => {
                 value={name}
                 name="name"
                 id="name"
-                readOnly
-                placeholder="nill"
+                onChange={(event) => setName(event.target.value)}
+                placeholder="User Name"
               />
             </div>
           </div>
-          <div className="profile-row-readonly-us">
+          <div className="profile-row">
             <div className="profile-email-us">
               <label htmlFor="id_cmp_email" className="email-name">
                 Email
@@ -97,17 +148,22 @@ const UserAccount = () => {
                 value={number}
                 name="number"
                 id="number"
-                readOnly
-                placeholder="nill"
+                onChange={(event) => setNumber(event.target.value)}
+                placeholder="Mobile Number"
               />
             </div>
           </div>
-          <div className="profile-row-readonly-us">
+          <div className="profile-row">
             <div className="profile-city-us">
               <label htmlFor="city" className="city-name">
                 Select City
               </label>
-              <select value={selectCity} id="city" readOnly>
+              <select
+                value={selectCity}
+                onChange={(e) => setSelectCity(e.target.value)}
+                id="city"
+                placeholder="City"
+              >
                 <option>Select City</option>
                 <option value="Namakkal">Namakkal</option>
                 <option value="Salem">Salem</option>
@@ -127,26 +183,29 @@ const UserAccount = () => {
               value={newState}
               name="state"
               id="state"
-              readOnly
-              placeholder="nill"
+              onChange={(event) => setNewState(event.target.value)}
+              placeholder="State"
             />
           </div> */}
           </div>
-          <div className="profile-row-readonly">
-            {/* <div className="profile-address">
-            <label htmlFor="address">Address</label>
-            <input
+          <div className="profile-row">
+            <div className="profile-address">
+              {/* <label htmlFor="address">Address</label> */}
+              {/* <input
               type="text"
               value={address}
               name="address"
               id="address"
-              readOnly
-              placeholder="nill"
-            />
-          </div> */}
+              onChange={(event) => setAddress(event.target.value)}
+              placeholder="Address"
+            /> */}
+            </div>
             <div className="profile-radio-us">
               <label className="gender-name">Gender</label>
-              <div className="profile-radioContainer-us">
+              <div
+                className="profile-radioContainer-us"
+                onChange={(event) => setGender(event.target.value)}
+              >
                 <div>
                   <input
                     type="radio"
@@ -154,7 +213,6 @@ const UserAccount = () => {
                     id="Male"
                     name="gender"
                     checked={"Male" === gender}
-                    readOnly
                   />
                   <label htmlFor="Male">Male</label>
                 </div>
@@ -165,7 +223,6 @@ const UserAccount = () => {
                     id="Female"
                     name="gender"
                     checked={"Female" === gender}
-                    readOnly
                   />
                   <label htmlFor="Female">Female</label>
                 </div>
@@ -177,21 +234,33 @@ const UserAccount = () => {
                     id="Other"
                     name="gender"
                     checked={"Other" === gender}
-                    readOnly
                   />
                   <label htmlFor="Other">Other</label>
                 </div>
               </div>
             </div>
           </div>
-          <div className="profile-btnContainer-us">
-            <Link to="/editProfile">
-              <button type="submit">
-                {!isEditing ? "Add Profile" : "Edit Profile"}
-              </button>
-            </Link>
-            <button onClick={signOutGoogle}>Logout</button>
-            {isEditing && <button onClick={doneBtn}>Done</button>}
+          <div className="profile-inputImg">
+            <div className="input-img">
+              <label htmlFor="image" className="upload-img">
+                Upload Your Profile Picture
+              </label>
+              <input
+                type="file"
+                name="image"
+                accept="image/*"
+                id="image"
+                onChange={(event) => getImageUrl(event)}
+              />
+            </div>
+          </div>
+          <div className="profile-btnContainer">
+            <button
+              type="submit"
+              onClick={(e) => addProfileData(e.target.value)}
+            >
+              Save
+            </button>
           </div>
         </from>
       </div>
@@ -199,4 +268,4 @@ const UserAccount = () => {
   );
 };
 
-export default UserAccount;
+export default EditProfile;

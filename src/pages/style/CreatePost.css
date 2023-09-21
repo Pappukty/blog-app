@@ -1,8 +1,8 @@
 .create {
-  width: 100%;
-
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+
   justify-content: center;
   align-items: center;
 
@@ -11,56 +11,13 @@
     rgba(131, 58, 180, 1) 0%,
     rgba(29, 253, 209, 0.9304096638655462) 50%,
     rgba(252, 176, 69, 1) 100%
-);
+  );
 }
 
-.navcreate {
-  height: 70px;
-  width: 100%;
-  display: flex;
-  background-color: transparent;
-  gap: 34rem;
-}
-.home-link-c {
-  font-size: 25px; 
-  font-weight: 800;
-  color: black;
-}
-.home-link-c:hover {
-  color: yellow;
-}
-.logout-cr {
-  background-color: #c8dafc;
-  color: darkcyan;
-  padding: 5px 13px;
-  height: 30px;
-  margin-top: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-}
-.logout-cr:hover {
-  color: red;
-  border: 2px solid blue;
-}
-.userlogo-cr {
-  border-radius: 50%;
-}
-.usernav-cr {
-  margin-top: -2.5rem;
-  margin-left: 2rem;
-} 
-.createPostPage {
-  width: 100%;
-  height: 600px;
-  /* display: grid;
-  place-items: center; */
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
 .cpContainer {
-  width: 500px;
+  width: 45%;
   height: auto;
+  margin: 0 auto;
   padding: 20px;
   background-color: black;
   border-radius: 12px;
@@ -109,20 +66,9 @@ textarea {
   margin-top: 5px;
 }
 
-@media (min-width: 425px) {
-  .create {
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    background: linear-gradient(
-      90deg,
-      rgba(131, 58, 180, 1) 0%,
-      rgba(29, 253, 209, 0.9304096638655462) 50%,
-      rgba(252, 176, 69, 1) 100%
-    );
+@media (max-width: 768px) {
+  .cpContainer {
+    width: 88%;
+    margin: 0 auto;
   }
 }
