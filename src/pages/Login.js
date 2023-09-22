@@ -108,8 +108,8 @@ function Login() {
             click here to register
           </Link>
         </div>
+        <p className="error">{errorMsg}</p>
       </form>
-      <p className="error">{errorMsg}</p>
     </div>
   );
 }

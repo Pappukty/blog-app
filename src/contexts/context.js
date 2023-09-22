@@ -1,6 +1,7 @@
 import { createContext, useContext, useReducer } from "react";
 import { useState, useEffect } from "react";
 import { auth } from "../firebase-config";
+import reducer from "../utils/reducer";
 const StateContext = createContext();
 
 const StateProvider = ({ children }) => {
@@ -47,6 +48,7 @@ const StateProvider = ({ children }) => {
         setIsAuth,
         singlePost,
         setSinglePost,
+        reducer,
       }}
     >
       {children}

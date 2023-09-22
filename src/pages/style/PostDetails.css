@@ -10,7 +10,7 @@
 .post-de {
   width: 50%;
   height: auto;
-  margin: 0 auto;
+  margin: 2rem auto;
   max-height: 600px;
   background-color: rgb(250, 250, 250);
   box-shadow: rgba(0, 0, 0, 0.24);
@@ -41,6 +41,36 @@
 @media (max-width: 768px) {
   .post-de {
     width: 80%;
+    height: 80%;
+    margin: 1.5rem auto;
+    max-height: 600px;
+    background-color: rgb(250, 250, 250);
+    box-shadow: rgba(0, 0, 0, 0.24);
+    margin: 2rem;
+    gap: 1rem;
+    overflow-y: scroll;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 13px;
+    margin-top: 1rem;
+    cursor: pointer;
+    border: 1px solid gray;
+    box-shadow: 0px 5px 10px 0px Rgba(0, 0, 0, 0.5);
+  }
+  .postHeader {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem auto;
+    width: 94%;
+  }
+  .postDetails-title {
+    flex: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .postDetails-p {
     margin: 0 auto;
   }
 }

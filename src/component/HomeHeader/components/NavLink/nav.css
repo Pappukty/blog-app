@@ -118,4 +118,25 @@
   .create-icon {
     width: 80%;
   }
+  .nav-nv {
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    padding: 0.2rem;
+    justify-content: center;
+  }
+  .nav-link {
+    width: 80px;
+    color: white;
+    gap: 1rem;
+    position: absolute;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    top: 60px;
+    border: 1px solid gray;
+    box-shadow: 5px 10px 5px 0px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+  }
 }

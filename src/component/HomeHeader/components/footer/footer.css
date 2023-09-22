@@ -43,3 +43,53 @@
   color: cadetblue;
   margin-bottom: 0.5rem;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: blueviolet;
+  }
+  .footer-icon {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 7px 8px;
+    margin-top: 1rem;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    gap: 1rem;
+  }
+  .icon-fd {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .icon-fd:hover {
+    color: rgb(182, 17, 108);
+  }
+  .des-footer {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .name-prt {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: cadetblue;
+    margin-bottom: 0.5rem;
+  }
+}

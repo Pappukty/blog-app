@@ -122,7 +122,6 @@ const Signup = () => {
           </select> */}
         </div>
 
-        <b className="error">{errorMsg}</b>
         <div className="btn">
           <button className="submit-btn-sign" type="submit" onClick={onSubmit}>
             Submit
@@ -137,6 +136,7 @@ const Signup = () => {
             click to here Login
           </Link>
         </div>
+        <p className="error">{errorMsg}</p>
       </form>
     </div>
   );

@@ -45,11 +45,12 @@ function Home(isAuth) {
       })
       .catch((err) => console.log(err.message));
   };
+  const getPosts = async () => {
+    const data = await getDocs(postsCollectionRef);
+    setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+  };
+
   useEffect(() => {
-    const getPosts = async () => {
-      const data = await getDocs(postsCollectionRef);
-      setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-    };
     getPosts();
   }, []);
 
@@ -57,10 +58,12 @@ function Home(isAuth) {
     try {
       const postDoc = doc(db, "posts", id);
       await deleteDoc(postDoc);
+
       toast.success("Blog Deleted SuccessFully !");
     } catch (error) {
       console.log(error);
     }
+    getPosts();
   };
 
   const updateposts = (posts) => {
@@ -109,8 +112,8 @@ function Home(isAuth) {
                   }}
                 >
                   {""}
-                  &#128465;
-                  {/* <AiFillDelete /> */}
+                  {/* &#128465; */}
+                  <AiFillDelete />
                 </button>
 
                 <div>
