@@ -12,8 +12,7 @@ const UserAccount = () => {
     name,
     email,
     selectCity,
-    newState,
-    address,
+
     gender,
     image,
     number,
@@ -51,16 +50,16 @@ const UserAccount = () => {
           <h1>Your Profile</h1>
           <div className="profile-row-readonly-us">
             {/* <div className="profile-id">
-            <label htmlFor="id">ID</label>
-            <input
-              type="text"
-              value={id}
-              name="id"
-              id="id"
-              placeholder="Auto Generate"
-              readOnly
-            />
-          </div> */}
+              <label htmlFor="id">ID</label>
+              <input
+                type="text"
+                value={id}
+                name="id"
+                id="id"
+                placeholder="Auto Generate"
+                readOnly
+              />
+            </div> */}
             <div className="profile-name-us">
               <label htmlFor="name" className="name">
                 User Name

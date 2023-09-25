@@ -87,63 +87,70 @@ function Home(isAuth) {
             <span> welcome to blog</span> <FaBookReader className="book" />
           </h1>
         </div>
-      </div>
 
-      <div className="homepage">
-        {/* <h2>{props.name ? `welcome-${props.name}` : "Login place"} </h2> */}
-        {postLists.map((posts) => {
-          return (
-            <div className="post">
-              {""}
-              <div className="postHeader" key={posts.id}>
-                {""}
-
-                <div className="title">
-                  <h1>{posts.title}</h1>
-                </div>
-              </div>
-
-              <div className="btn-container">
-                {/* {isAuth && postLists.author.id === auth.currentUser.uid && ( */}
-                <button
-                  className="delete-btn"
-                  onClick={() => {
-                    deletepost(posts.id);
-                  }}
-                >
-                  {""}
-                  {/* &#128465; */}
-                  <AiFillDelete />
-                </button>
-
+        <div className="homepage">
+          {/* <h2>{props.name ? `welcome-${props.name}` : "Login place"} </h2> */}
+          {postLists.map((posts) => {
+            return (
+              <div className="post">
                 <div>
+                  <img
+                    src={posts.imageUpload}
+                    alt=""
+                    className="post-image"
+                  ></img>
+                </div>
+                {""}
+                <div className="postHeader" key={posts.id}>
+                  {""}
+
+                  <div className="title">
+                    <h3>{posts.title}</h3>
+                  </div>
+                </div>
+
+                <div className="btn-container">
+                  {/* {isAuth && postLists.author.id === auth.currentUser.uid && ( */}
                   <button
-                    className="update-btn"
+                    className="delete-btn"
                     onClick={() => {
-                      updateposts(posts);
+                      deletepost(posts.id);
                     }}
                   >
-                    <FaEdit />
+                    {""}
+                    {/* &#128465; */}
+                    <AiFillDelete />
                   </button>
+
+                  <div>
+                    <button
+                      className="update-btn"
+                      onClick={() => {
+                        updateposts(posts);
+                      }}
+                    >
+                      <FaEdit />
+                    </button>
+                  </div>
+                </div>
+
+                <div className="postTextContainer">{posts.postText}</div>
+                {/* <h3>@{posts.author.name}</h3> */}
+                {<h3 className="name-author">@{posts.author.name}</h3>}
+                <div className="read">
+                  <span
+                    className="read-post"
+                    onClick={() => {
+                      handelClickPost(posts);
+                    }}
+                  >
+                    Readmore
+                  </span>
                 </div>
               </div>
-
-              <div className="postTextContainer">{posts.postText}</div>
-              {/* <h3>@{posts.author.name}</h3> */}
-              {<h3>@{posts.author.name}</h3>}
-              <div className="read">
-                <span
-                  className="read-post"
-                  onClick={() => {
-                    handelClickPost(posts);
-                  }}
-                >
-                  Readmore
-                </span>
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </>
   );

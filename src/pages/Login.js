@@ -88,22 +88,15 @@ function Login() {
           </button>
         </div>
         <div className="login-test-credential-btn">
-          <button
-            type="button"
-            className="login-credential-btn"
-            onClick={showTestLogin}
-          >
-            Test Credentials
-          </button>
-          {isShowLogin && (
-            <div>
-              <p>Email: test@gmail.com</p>
-              <p>Password: test@123</p>
-            </div>
-          )}
+          <div className="login-test-credential">
+            <h3> Test Credentials</h3>
+
+            <p>Email: test@gmail.com</p>
+            <p>Password: test@123</p>
+          </div>
         </div>
         <div className="res-link">
-          <span>New to iBlog</span>
+          <span>New to Blog</span>
           <Link to="/signup" className="signupclick">
             click here to register
           </Link>

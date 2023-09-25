@@ -10,7 +10,7 @@
   justify-content: space-between;
   align-items: center;
   display: flex;
-  width: 90%;
+  width: 96.4%;
 
   height: 60px;
   margin: 0 auto;
@@ -27,7 +27,7 @@
 .nav-blg h3 {
   font-size: 27px;
   font-weight: 900;
-
+  margin-left: 1.4rem;
   color: black;
 }
 .nav-blg h3:hover {
@@ -58,7 +58,7 @@
   color: white;
   gap: 1rem;
   position: absolute;
-  right: 45px;
+  right: 0px;
   display: flex;
   flex-direction: column;
   top: 60px;
@@ -127,16 +127,31 @@
     justify-content: center;
   }
   .nav-link {
-    width: 80px;
+    width: 74px;
     color: white;
     gap: 1rem;
     position: absolute;
-    right: 20px;
+    right: 10px;
     display: flex;
     flex-direction: column;
     top: 60px;
     border: 1px solid gray;
     box-shadow: 5px 10px 5px 0px rgba(0, 0, 0, 0.5);
     text-decoration: none;
+  }
+  .nav-link li {
+    color: goldenrod;
+    gap: 4rem;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: center;
+    text-decoration: none;
+    padding: 9px 13px;
+    border-bottom: 1px solid gray;
+    background-color: transparent;
+    cursor: pointer;
   }
 }

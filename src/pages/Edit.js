@@ -13,6 +13,7 @@ const Edit = () => {
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [postText, setPostText] = useState("");
+
   const [modifiedField, setModifiedField] = useState({});
 
   useEffect(() => {

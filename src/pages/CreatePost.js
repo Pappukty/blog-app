@@ -4,22 +4,30 @@ import { addDoc, collection } from "firebase/firestore";
 import { db, auth } from "../firebase-config";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-
+import { useStateContext } from "../contexts/context";
 import "react-toastify/dist/ReactToastify.css";
-
+import { storage } from "../firebase-config";
+import { ref, uploadBytes } from "firebase/storage";
+import { v4 } from "uuid";
 import "./style/CreatePost.css";
 function CreatePost({ isAuth }) {
   const [title, setTitle] = useState("");
   const [postText, setPostText] = useState("");
-
+  const { imageUpload, setImageUpload, uploadImage, dispatch } =
+    useStateContext();
   const postsCollectionRef = collection(db, "posts");
   let navigate = useNavigate();
   const createPost = async () => {
-    await addDoc(postsCollectionRef, {
-      title,
-      postText,
-      author: { name: auth.currentUser.displayName, id: auth.currentUser.uid },
-    });
+    if ((title && postText) || imageUpload)
+      await addDoc(postsCollectionRef, {
+        title,
+        postText,
+        imageUpload,
+        author: {
+          name: auth.currentUser.displayName,
+          id: auth.currentUser.uid,
+        },
+      });
 
     navigate("/");
     toast.success("create successfully");
@@ -48,6 +56,18 @@ function CreatePost({ isAuth }) {
             onChange={(event) => {
               setPostText(event.target.value);
             }}
+          />
+        </div>
+        <div className="createPost-from-img">
+          <input
+            type="file"
+            name="image"
+            className="image"
+            accept="image/*"
+            onChange={(event) => {
+              uploadImage(event);
+            }}
+            required
           />
         </div>
         <button onClick={createPost}> Submit Post</button>

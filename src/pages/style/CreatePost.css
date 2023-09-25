@@ -52,11 +52,15 @@
 }
 .cpContainer button {
   margin-top: 20px;
-  height: 40px;
+  height: 36px;
   border: none;
+  padding: 8px 13px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 17px;
+  font-weight: 600;
+  background-color: blue;
+  color: white;
 }
 .cpContainer button:hover {
   color: red;
@@ -65,7 +69,15 @@ input,
 textarea {
   margin-top: 5px;
 }
+.createPost-from-img {
+  margin: 1rem;
+}
 
+.image {
+  padding: 5px 10px;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
 @media (max-width: 768px) {
   .cpContainer {
     width: 88%;
