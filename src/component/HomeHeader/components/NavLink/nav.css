@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   display: flex;
+  overflow-x: hidden;
 }
 
 .nav-item {
@@ -109,6 +110,15 @@
   color: azure;
 }
 @media (max-width: 768px) {
+  .nav-item {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+    height: 60px;
+    margin: 0 auto;
+  }
   .nav-item button {
     width: 70%;
   }
